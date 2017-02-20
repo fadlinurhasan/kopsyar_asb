@@ -1,0 +1,1 @@
+json.partial! "tipe_nasabahs/tipe_nasabah", tipe_nasabah: @tipe_nasabah

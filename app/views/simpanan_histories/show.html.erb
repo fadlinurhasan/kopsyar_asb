@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nilai simpanan:</strong>
+  <%= @simpanan_history.nilai_simpanan %>
+</p>
+
+<p>
+  <strong>Catatan:</strong>
+  <%= @simpanan_history.catatan %>
+</p>
+
+<p>
+  <strong>Tipe simpanan:</strong>
+  <%= @simpanan_history.tipe_simpanan %>
+</p>
+
+<p>
+  <strong>Nasabah:</strong>
+  <%= @simpanan_history.nasabah %>
+</p>
+
+<p>
+  <strong>Petugas:</strong>
+  <%= @simpanan_history.petugas %>
+</p>
+
+<%= link_to 'Edit', edit_simpanan_history_path(@simpanan_history) %> |
+<%= link_to 'Back', simpanan_histories_path %> |
+<%= link_to 'New Simpanan history', new_simpanan_history_path %>
+

@@ -1,0 +1,1 @@
+json.partial! "penarikan_histories/penarikan_history", penarikan_history: @penarikan_history

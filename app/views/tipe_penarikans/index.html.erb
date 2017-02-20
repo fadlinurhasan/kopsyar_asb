@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tipe Penarikans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ident name</th>
+      <th>Name</th>
+      <th>Penarikan history</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tipe_penarikans.each do |tipe_penarikan| %>
+      <tr>
+        <td><%= tipe_penarikan.ident_name %></td>
+        <td><%= tipe_penarikan.name %></td>
+        <td><%= tipe_penarikan.penarikan_history %></td>
+        <td><%= link_to 'Show', tipe_penarikan %></td>
+        <td><%= link_to 'Edit', edit_tipe_penarikan_path(tipe_penarikan) %></td>
+        <td><%= link_to 'Destroy', tipe_penarikan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tipe penarikan', new_tipe_penarikan_path %>

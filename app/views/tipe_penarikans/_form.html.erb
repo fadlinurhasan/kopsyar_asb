@@ -1,0 +1,29 @@
+<%= form_for(@tipe_penarikan) do |f| %>
+  <% if @tipe_penarikan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tipe_penarikan.errors.count, "error") %> prohibited this tipe_penarikan from being saved:</h2>
+
+      <ul>
+      <% @tipe_penarikan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ident_name %><br>
+    <%= f.text_field :ident_name %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :penarikan_history %><br>
+    <%= f.text_field :penarikan_history %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

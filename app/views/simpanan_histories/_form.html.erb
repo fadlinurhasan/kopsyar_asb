@@ -1,0 +1,36 @@
+<%= form_for(@simpanan_history) do |f| %>
+  <% if @simpanan_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@simpanan_history.errors.count, "error") %> prohibited this simpanan_history from being saved:</h2>
+
+      <ul>
+      <% @simpanan_history.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nilai_simpanan %><br>
+    <%= f.text_field :nilai_simpanan %>
+  </div>
+  <div class="field">
+    <%= f.label :catatan %><br>
+    <%= f.text_field :catatan %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tipe_simpanan %>
+    <%= f.collection_select(:tipe_simpanan_id, TipeSimpanan.all, :id, :name, include_blank: false) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nasabah %>
+    <%= f.collection_select(:nasabah_id, User.all, :id, :email, include_blank: false) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+json.extract! penarikan_history, :id, :nilai_penarikan, :catatan, :tipe_penarikan_id, :nasabah_id, :petugas_id, :created_at, :updated_at
+json.url penarikan_history_url(penarikan_history, format: :json)

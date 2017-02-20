@@ -1,0 +1,1 @@
+json.partial! "simpanan_histories/simpanan_history", simpanan_history: @simpanan_history

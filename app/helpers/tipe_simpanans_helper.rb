@@ -1,0 +1,2 @@
+module TipeSimpanansHelper
+end

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tipe Nasabahs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ident name</th>
+      <th>Name</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tipe_nasabahs.each do |tipe_nasabah| %>
+      <tr>
+        <td><%= tipe_nasabah.ident_name %></td>
+        <td><%= tipe_nasabah.name %></td>
+        <td><%= tipe_nasabah.user %></td>
+        <td><%= link_to 'Show', tipe_nasabah %></td>
+        <td><%= link_to 'Edit', edit_tipe_nasabah_path(tipe_nasabah) %></td>
+        <td><%= link_to 'Destroy', tipe_nasabah, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tipe nasabah', new_tipe_nasabah_path %>

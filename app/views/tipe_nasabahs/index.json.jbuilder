@@ -1,0 +1,1 @@
+json.array! @tipe_nasabahs, partial: 'tipe_nasabahs/tipe_nasabah', as: :tipe_nasabah

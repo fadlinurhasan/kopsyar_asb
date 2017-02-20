@@ -1,0 +1,37 @@
+<%= form_for(@penarikan_history) do |f| %>
+  <% if @penarikan_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@penarikan_history.errors.count, "error") %> prohibited this penarikan_history from being saved:</h2>
+
+      <ul>
+      <% @penarikan_history.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nilai_penarikan %><br>
+    <%= f.text_field :nilai_penarikan %>
+  </div>
+  <div class="field">
+    <%= f.label :catatan %><br>
+    <%= f.text_field :catatan %>
+  </div>
+  <div class="field">
+    <%= f.label :tipe_penarikan_id %><br>
+    <%= f.text_field :tipe_penarikan_id %>
+  </div>
+  <div class="field">
+    <%= f.label :nasabah_id %><br>
+    <%= f.text_field :nasabah_id %>
+  </div>
+  <div class="field">
+    <%= f.label :petugas_id %><br>
+    <%= f.text_field :petugas_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

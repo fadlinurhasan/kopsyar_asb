@@ -1,0 +1,1 @@
+json.partial! "tipe_penarikans/tipe_penarikan", tipe_penarikan: @tipe_penarikan

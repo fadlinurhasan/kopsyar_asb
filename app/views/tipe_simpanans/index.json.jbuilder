@@ -1,0 +1,1 @@
+json.array! @tipe_simpanans, partial: 'tipe_simpanans/tipe_simpanan', as: :tipe_simpanan

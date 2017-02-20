@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Penarikan Histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nilai penarikan</th>
+      <th>Catatan</th>
+      <th>Tipe penarikan</th>
+      <th>Nasabah</th>
+      <th>Petugas</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @penarikan_histories.each do |penarikan_history| %>
+      <tr>
+        <td><%= penarikan_history.nilai_penarikan %></td>
+        <td><%= penarikan_history.catatan %></td>
+        <td><%= penarikan_history.tipe_penarikan %></td>
+        <td><%= penarikan_history.nasabah %></td>
+        <td><%= penarikan_history.petugas %></td>
+        <td><%= link_to 'Show', penarikan_history %></td>
+        <td><%= link_to 'Edit', edit_penarikan_history_path(penarikan_history) %></td>
+        <td><%= link_to 'Destroy', penarikan_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Penarikan history', new_penarikan_history_path %>

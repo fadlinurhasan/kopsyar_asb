@@ -1,0 +1,29 @@
+<%= form_for(@tipe_anggotum) do |f| %>
+  <% if @tipe_anggotum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tipe_anggotum.errors.count, "error") %> prohibited this tipe_anggotum from being saved:</h2>
+
+      <ul>
+      <% @tipe_anggotum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ident_name %><br>
+    <%= f.text_field :ident_name %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :user %><br>
+    <%= f.text_field :user %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

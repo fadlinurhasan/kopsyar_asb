@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nilai_simpanan: MyString
+  catatan: MyString
+  tipe_simpanan_id: 
+  nasabah_id: 
+  petugas_id: 
+
+two:
+  nilai_simpanan: MyString
+  catatan: MyString
+  tipe_simpanan_id: 
+  nasabah_id: 
+  petugas_id: 

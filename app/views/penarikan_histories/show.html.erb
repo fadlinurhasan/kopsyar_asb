@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nilai penarikan:</strong>
+  <%= @penarikan_history.nilai_penarikan %>
+</p>
+
+<p>
+  <strong>Catatan:</strong>
+  <%= @penarikan_history.catatan %>
+</p>
+
+<p>
+  <strong>Tipe penarikan:</strong>
+  <%= @penarikan_history.tipe_penarikan %>
+</p>
+
+<p>
+  <strong>Nasabah:</strong>
+  <%= @penarikan_history.nasabah %>
+</p>
+
+<p>
+  <strong>Petugas:</strong>
+  <%= @penarikan_history.petugas %>
+</p>
+
+<%= link_to 'Edit', edit_penarikan_history_path(@penarikan_history) %> |
+<%= link_to 'Back', penarikan_histories_path %> |
+<%= link_to 'New Penarikan history', new_penarikan_history_path %>

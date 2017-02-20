@@ -1,0 +1,1 @@
+json.array! @tipe_anggota, partial: 'tipe_anggota/tipe_anggotum', as: :tipe_anggotum

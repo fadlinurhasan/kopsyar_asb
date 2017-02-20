@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ident name:</strong>
+  <%= @tipe_anggota.ident_name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tipe_anggota.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tipe_anggota.user %>
+</p>
+
+<%= link_to 'Edit', edit_tipe_anggota_path(@tipe_anggota) %> |
+<%= link_to 'Back', tipe_anggota_path %> |
+<%= link_to 'New Tipe anggotum', new_tipe_anggota_path %>

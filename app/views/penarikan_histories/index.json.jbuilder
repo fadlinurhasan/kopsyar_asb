@@ -1,0 +1,1 @@
+json.array! @penarikan_histories, partial: 'penarikan_histories/penarikan_history', as: :penarikan_history

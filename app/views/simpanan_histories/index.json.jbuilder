@@ -1,0 +1,1 @@
+json.array! @simpanan_histories, partial: 'simpanan_histories/simpanan_history', as: :simpanan_history

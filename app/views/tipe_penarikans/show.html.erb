@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ident name:</strong>
+  <%= @tipe_penarikan.ident_name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tipe_penarikan.name %>
+</p>
+
+<p>
+  <strong>Penarikan history:</strong>
+  <%= @tipe_penarikan.penarikan_history %>
+</p>
+
+<%= link_to 'Edit', edit_tipe_penarikan_path(@tipe_penarikan) %> |
+<%= link_to 'Back', tipe_penarikans_path %> |
+<%= link_to 'New Tipe penarikan', new_tipe_penarikan_path %>
+
+

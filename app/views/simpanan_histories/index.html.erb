@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Simpanan Histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nilai simpanan</th>
+      <th>Catatan</th>
+      <th>Tipe simpanan</th>
+      <th>Nasabah</th>
+      <th>Petugas</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @simpanan_histories.each do |simpanan_history| %>
+      <tr>
+        <td><%= simpanan_history.nilai_simpanan %></td>
+        <td><%= simpanan_history.catatan %></td>
+        <td><%= simpanan_history.tipe_simpanan.try(:name) %></td>
+        <td><%= simpanan_history.nasabah.try(:email) %></td>
+        <td><%= simpanan_history.petugas.try(:email) %></td>
+        <td><%= link_to 'Show', simpanan_history %></td>
+        <td><%= link_to 'Edit', edit_simpanan_history_path(simpanan_history) %></td>
+        <td><%= link_to 'Destroy', simpanan_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Simpanan history', new_simpanan_history_path %>

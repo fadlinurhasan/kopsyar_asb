@@ -1,0 +1,25 @@
+<%= form_for(@tipe_simpanan) do |f| %>
+  <% if @tipe_simpanan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tipe_simpanan.errors.count, "error") %> prohibited this tipe_simpanan from being saved:</h2>
+
+      <ul>
+      <% @tipe_simpanan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ident_name %><br>
+    <%= f.text_field :ident_name %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

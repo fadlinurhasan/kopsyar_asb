@@ -1,0 +1,2 @@
+module TipePenarikansHelper
+end
