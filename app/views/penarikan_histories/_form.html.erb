@@ -20,17 +20,15 @@
     <%= f.text_field :catatan %>
   </div>
   <div class="field">
-    <%= f.label :tipe_penarikan_id %><br>
-    <%= f.text_field :tipe_penarikan_id %>
+    <%= f.label :tipe_penarikan %>
+    <%= f.collection_select(:tipe_penarikan_id, TipePenarikan.all, :id, :name, include_blank: false) %>
   </div>
   <div class="field">
-    <%= f.label :nasabah_id %><br>
-    <%= f.text_field :nasabah_id %>
+    <%= f.label :nasabah %>
+    <%= f.collection_select(:nasabah_id, User.all, :id, :email, include_blank: false) %>
   </div>
-  <div class="field">
-    <%= f.label :petugas_id %><br>
-    <%= f.text_field :petugas_id %>
-  </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

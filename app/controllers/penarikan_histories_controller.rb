@@ -15,6 +15,7 @@ class PenarikanHistoriesController < ApplicationController
   # GET /penarikan_histories/new
   def new
     @penarikan_history = PenarikanHistory.new
+    @penarikan_history.petugas_id = current_user.id
   end
 
   # GET /penarikan_histories/1/edit
@@ -25,6 +26,7 @@ class PenarikanHistoriesController < ApplicationController
   # POST /penarikan_histories.json
   def create
     @penarikan_history = PenarikanHistory.new(penarikan_history_params)
+    @penarikan_history.petugas_id = current_user.id
 
     respond_to do |format|
       if @penarikan_history.save

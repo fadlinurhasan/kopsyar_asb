@@ -1,0 +1,1 @@
+json.array! @transaksi_histories, partial: 'transaksi_histories/transaksi_history', as: :transaksi_history

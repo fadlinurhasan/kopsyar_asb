@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :transaksi_histories
   resources :tipe_nasabahs
   resources :penarikan_histories
   resources :tipe_penarikans

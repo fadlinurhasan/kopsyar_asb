@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @transaksi_history.user %>
+</p>
+
+<p>
+  <strong>Simpanan history:</strong>
+  <%= @transaksi_history.simpanan_history %>
+</p>
+
+<p>
+  <strong>Penarikan history:</strong>
+  <%= @transaksi_history.penarikan_history %>
+</p>
+
+<%= link_to 'Edit', edit_transaksi_history_path(@transaksi_history) %> |
+<%= link_to 'Back', transaksi_histories_path %>

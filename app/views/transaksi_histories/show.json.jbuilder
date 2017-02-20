@@ -1,0 +1,1 @@
+json.partial! "transaksi_histories/transaksi_history", transaksi_history: @transaksi_history

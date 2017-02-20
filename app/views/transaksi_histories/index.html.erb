@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Transaksi Histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Simpanan history</th>
+      <th>Penarikan history</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transaksi_histories.each do |transaksi_history| %>
+      <tr>
+        <td><%= transaksi_history.user %></td>
+        <td><%= transaksi_history.simpanan_history %></td>
+        <td><%= transaksi_history.penarikan_history %></td>
+        <td><%= link_to 'Show', transaksi_history %></td>
+        <td><%= link_to 'Edit', edit_transaksi_history_path(transaksi_history) %></td>
+        <td><%= link_to 'Destroy', transaksi_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transaksi history', new_transaksi_history_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  simpanan_history_id: 
+  penarikan_history_id: 
+
+two:
+  user_id: 
+  simpanan_history_id: 
+  penarikan_history_id: 
