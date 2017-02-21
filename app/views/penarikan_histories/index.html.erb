@@ -19,9 +19,9 @@
       <tr>
         <td><%= penarikan_history.nilai_penarikan %></td>
         <td><%= penarikan_history.catatan %></td>
-        <td><%= penarikan_history.tipe_penarikan %></td>
-        <td><%= penarikan_history.nasabah %></td>
-        <td><%= penarikan_history.petugas %></td>
+        <td><%= penarikan_history.tipe_penarikan.try(:name) %></td>
+        <td><%= penarikan_history.nasabah.try(:email) %></td>
+        <td><%= penarikan_history.petugas.try(:email) %></td>
         <td><%= link_to 'Show', penarikan_history %></td>
         <td><%= link_to 'Edit', edit_penarikan_history_path(penarikan_history) %></td>
         <td><%= link_to 'Destroy', penarikan_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>

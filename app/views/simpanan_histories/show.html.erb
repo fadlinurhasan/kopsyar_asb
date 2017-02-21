@@ -12,17 +12,17 @@
 
 <p>
   <strong>Tipe simpanan:</strong>
-  <%= @simpanan_history.tipe_simpanan %>
+  <%= @simpanan_history.tipe_simpanan.try(:name) %>
 </p>
 
 <p>
   <strong>Nasabah:</strong>
-  <%= @simpanan_history.nasabah %>
+  <%= @simpanan_history.nasabah.try(:email) %>
 </p>
 
 <p>
   <strong>Petugas:</strong>
-  <%= @simpanan_history.petugas %>
+  <%= @simpanan_history.petugas.try(:email) %>
 </p>
 
 <%= link_to 'Edit', edit_simpanan_history_path(@simpanan_history) %> |

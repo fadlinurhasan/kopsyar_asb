@@ -1,1 +1,0 @@
-json.partial! "tipe_anggota/tipe_anggotum", tipe_anggotum: @tipe_anggotum

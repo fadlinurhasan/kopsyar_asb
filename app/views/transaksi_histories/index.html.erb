@@ -5,9 +5,10 @@
 <table>
   <thead>
     <tr>
-      <th>User</th>
-      <th>Simpanan history</th>
-      <th>Penarikan history</th>
+      <th>Nasabah</th>
+      <th>Nilai Transaksi</th>
+      <th>Tipe Transaksi</th>
+      <th>Petugas<
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +16,14 @@
   <tbody>
     <% @transaksi_histories.each do |transaksi_history| %>
       <tr>
-        <td><%= transaksi_history.user %></td>
-        <td><%= transaksi_history.simpanan_history %></td>
-        <td><%= transaksi_history.penarikan_history %></td>
+        <td><%= transaksi_history.simpanan_history.try(:nasabah).try(:email) || 
+                transaksi_history.penarikan_history.try(:nasabah).try(:email) %></td>
+        <td><%= transaksi_history.simpanan_history.try(:nilai_simpanan) ||
+                transaksi_history.penarikan_history.try(:nilai_penarikan) %></td>
+        <td><%= transaksi_history.simpanan_history.try(:tipe_simpanan).try(:name) ||
+                transaksi_history.penarikan_history.try(:tipe_penarikan).try(:name) %></td>
+        <td><%= transaksi_history.simpanan_history.try(:petugas).try(:email) ||
+                transaksi_history.penarikan_history.try(:petugas).try(:email) %></td>
         <td><%= link_to 'Show', transaksi_history %></td>
         <td><%= link_to 'Edit', edit_transaksi_history_path(transaksi_history) %></td>
         <td><%= link_to 'Destroy', transaksi_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
