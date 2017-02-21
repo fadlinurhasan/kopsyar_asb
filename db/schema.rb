@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170219142738) do
+ActiveRecord::Schema.define(version: 20170221164425) do
 
   create_table "penarikan_histories", force: :cascade do |t|
-    t.string   "nilai_penarikan"
+    t.float    "nilai_penarikan"
     t.string   "catatan"
     t.integer  "tipe_penarikan_id"
     t.integer  "nasabah_id"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20170219142738) do
   end
 
   create_table "simpanan_histories", force: :cascade do |t|
-    t.string   "nilai_simpanan"
+    t.float    "nilai_simpanan"
     t.string   "catatan"
     t.integer  "tipe_simpanan_id"
     t.integer  "nasabah_id"
@@ -74,6 +74,18 @@ ActiveRecord::Schema.define(version: 20170219142738) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "transaksi_histories", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "simpanan_history_id"
+    t.integer  "penarikan_history_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "transaksi_histories", ["penarikan_history_id"], name: "index_transaksi_histories_on_penarikan_history_id"
+  add_index "transaksi_histories", ["simpanan_history_id"], name: "index_transaksi_histories_on_simpanan_history_id"
+  add_index "transaksi_histories", ["user_id"], name: "index_transaksi_histories_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
