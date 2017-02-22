@@ -12,17 +12,17 @@
 
 <p>
   <strong>Tipe penarikan:</strong>
-  <%= @penarikan_history.tipe_penarikan %>
+  <%= @penarikan_history.tipe_penarikan.try(:name) %>
 </p>
 
 <p>
   <strong>Nasabah:</strong>
-  <%= @penarikan_history.nasabah %>
+  <%= @penarikan_history.nasabah.try(:email) %>
 </p>
 
 <p>
   <strong>Petugas:</strong>
-  <%= @penarikan_history.petugas %>
+  <%= @penarikan_history.petugas.try(:email) %>
 </p>
 
 <%= link_to 'Edit', edit_penarikan_history_path(@penarikan_history) %> |

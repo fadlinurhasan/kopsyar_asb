@@ -7,12 +7,12 @@
 
 <p>
   <strong>Simpanan history:</strong>
-  <%= @transaksi_history.simpanan_history %>
+  <%= @transaksi_history.simpanan_history.try(:nilai_simpanan) %>
 </p>
 
 <p>
   <strong>Penarikan history:</strong>
-  <%= @transaksi_history.penarikan_history %>
+  <%= @transaksi_history.penarikan_history.try(:nilai_penarikan) %>
 </p>
 
 <%= link_to 'Edit', edit_transaksi_history_path(@transaksi_history) %> |
