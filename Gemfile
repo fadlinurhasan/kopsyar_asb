@@ -22,11 +22,13 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'devise'
 gem "cancancan"
 gem "nested_form"
 gem 'public_activity'
+gem 'bootstrap-sass', '~> 3.3.4'
+gem "less-rails"
+gem "twitter-bootstrap-rails"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -52,3 +54,4 @@ end
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
+gem 'therubyracer'
